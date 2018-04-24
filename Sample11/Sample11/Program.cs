@@ -74,7 +74,7 @@ namespace Sample11
         {
             int a = 5;
             int b = 0;
-            a /= b;
+            a/=b;
         }
     }
 
