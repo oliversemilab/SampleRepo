@@ -56,5 +56,11 @@ namespace Sample11
         {
             return a / b + 1;
         }
+        public void DivByZero()
+        {
+            int a = 5;
+            int b = 0;
+            a /= b;
+        }
     }
 }
