@@ -48,5 +48,9 @@ namespace Sample11
             }
             return result;
         }
+        public static float DivB(float a, float b)
+        {
+            return a / b;
+        }
     }
 }
