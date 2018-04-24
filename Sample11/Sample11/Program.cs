@@ -15,4 +15,12 @@ namespace Sample11
             System.Console.ReadKey();
         }
     }
+
+    class CoCalc
+    {
+        public static int Add(int a, int b)
+        {
+            return a + b;
+        }
+    }
 }
