@@ -16,25 +16,35 @@ namespace Sample11
             float a = 5.6F;
             float b = 0;
             float c = 11.2F;
+            Calc calc = new Calc();
 
-            System.Console.WriteLine(a + " / " + b + " = " + "{0}", Calc.Div(a, b));
-            System.Console.WriteLine(a + " / " + c + " = " + "{0}", Calc.Div(a, c));
-            System.Console.WriteLine(b + " / " + a + " = " + "{0}", Calc.Div(b, a));
-            System.Console.WriteLine(b + " / " + c + " = " + "{0}", Calc.Div(b, c));
-            System.Console.WriteLine(c + " / " + a + " = " + "{0}", Calc.Div(c, a));
-            System.Console.WriteLine(c + " / " + b + " = " + "{0}", Calc.Div(c, b));
+            System.Console.WriteLine(a + " / " + b + " = " + "{0}", calc.Div(a, b));
+            System.Console.WriteLine(a + " / " + c + " = " + "{0}", calc.Div(a, c));
+            System.Console.WriteLine(b + " / " + a + " = " + "{0}", calc.Div(b, a));
+            System.Console.WriteLine(b + " / " + c + " = " + "{0}", calc.Div(b, c));
+            System.Console.WriteLine(c + " / " + a + " = " + "{0}", calc.Div(c, a));
+            System.Console.WriteLine(c + " / " + b + " = " + "{0}", calc.Div(c, b));
 
             System.Console.ReadKey();
         }
     }
-
-    class Calc
+    interface ICalc
     {
-        public static float Add(float a, float b)
+        float Add(float a, float b);
+        float Div(float a, float b);
+        float DivB(float a, float b);
+        float DivD(float a, float b);
+        float Mult(float a, float b);
+    }
+
+    class Calc : ICalc
+    {
+        public float Add(float a, float b)
         {
+            System.Console.WriteLine("add again");
             return a + b;
         }
-        public static float Div(float a, float b)
+        public float Div(float a, float b)
         {
             float result = 0;
             try
@@ -48,13 +58,17 @@ namespace Sample11
             }
             return result;
         }
-        public static float DivB(float a, float b)
+        public float DivB(float a, float b)
         {
             return a / b;
         }
-        public static float DivD(float a, float b)
+        public float DivD(float a, float b)
         {
             return a / b + 1;
+        }
+        public float Mult(float a, float b)
+        {
+            return a * b;
         }
         public void DivByZero()
         {
@@ -62,5 +76,11 @@ namespace Sample11
             int b = 0;
             a /= b;
         }
+    }
+
+    class Book
+    {
+        float Length;
+        float height;
     }
 }
