@@ -10,6 +10,7 @@ namespace Sample11
     {
         static void Main(string[] args)
         {
+            //Writes hello world message to the console
             System.Console.WriteLine("Hello World");
         }
     }
