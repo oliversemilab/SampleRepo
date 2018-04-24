@@ -17,18 +17,18 @@ namespace Sample11
             float b = 0;
             float c = 11.2F;
 
-            System.Console.WriteLine(a + " / " + b + " = " + "{0}", CoCalc.Div(a, b));
-            System.Console.WriteLine(a + " / " + c + " = " + "{0}", CoCalc.Div(a, c));
-            System.Console.WriteLine(b + " / " + a + " = " + "{0}", CoCalc.Div(b, a));
-            System.Console.WriteLine(b + " / " + c + " = " + "{0}", CoCalc.Div(b, c));
-            System.Console.WriteLine(c + " / " + a + " = " + "{0}", CoCalc.Div(c, a));
-            System.Console.WriteLine(c + " / " + b + " = " + "{0}", CoCalc.Div(c, b));
+            System.Console.WriteLine(a + " / " + b + " = " + "{0}", Calc.Div(a, b));
+            System.Console.WriteLine(a + " / " + c + " = " + "{0}", Calc.Div(a, c));
+            System.Console.WriteLine(b + " / " + a + " = " + "{0}", Calc.Div(b, a));
+            System.Console.WriteLine(b + " / " + c + " = " + "{0}", Calc.Div(b, c));
+            System.Console.WriteLine(c + " / " + a + " = " + "{0}", Calc.Div(c, a));
+            System.Console.WriteLine(c + " / " + b + " = " + "{0}", Calc.Div(c, b));
 
             System.Console.ReadKey();
         }
     }
 
-    class CoCalc
+    class Calc
     {
         public static float Add(float a, float b)
         {
@@ -51,6 +51,10 @@ namespace Sample11
         public static float DivB(float a, float b)
         {
             return a / b;
+        }
+        public static float DivD(float a, float b)
+        {
+            return a / b + 1;
         }
     }
 }
