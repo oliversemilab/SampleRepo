@@ -18,9 +18,22 @@ namespace Sample11
 
     class CoCalc
     {
-        public static int Add(int a, int b)
+        public static float Add(float a, float b)
         {
             return a + b;
+        }
+        public static float Div(float a, float b)
+        {
+            float result = 0;
+            try
+            {
+                result = a / b;
+            }
+            catch (DivideByZeroException)
+            {
+                System.Console.WriteLine("Attempted division by 0 failed. Result set to 0");
+            }
+            return result;
         }
     }
 }
