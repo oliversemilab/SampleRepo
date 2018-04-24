@@ -42,7 +42,7 @@ namespace Sample11
                 result = a / b;
                 if (b == 0) { System.Console.WriteLine("OOPS: Division by 0 is allowed by " + a.GetType() + " Type variables"); }
             }
-            catch (DivideByZeroException e)
+            catch (DivideByZeroException)
             {
                 System.Console.WriteLine("Attempted division by 0 failed. Result set to 0");
             }
