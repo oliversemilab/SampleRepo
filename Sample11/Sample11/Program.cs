@@ -12,7 +12,6 @@ namespace Sample11
         {
             //Writes hello world message to the console
             System.Console.WriteLine("Hello World");
-            int n;
         }
     }
 }
